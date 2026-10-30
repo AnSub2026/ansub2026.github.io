@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Project Page</title>
+<style>
+  :root {
+    --bg:   #ffffff;
+    --fg:   #1a1d1f;
+    --mute: #6b7a82;
+    --rule: #e3e8ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:   #14171a;
+      --fg:   #e8ecee;
+      --mute: #9aa7ae;
+      --rule: #2a3034;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:   #14171a;
+    --fg:   #e8ecee;
+    --mute: #9aa7ae;
+    --rule: #2a3034;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body { height: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    max-width: 30rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 0 0 1.25rem;
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  /* Animated ellipsis: . .. ... .... and back.
+     Only opacity is animated, so the heading never shifts. */
+  .dots i {
+    font-style: normal;
+  }
+  .dots i:nth-child(2) { animation: d2 1.6s steps(1, end) infinite; }
+  .dots i:nth-child(3) { animation: d3 1.6s steps(1, end) infinite; }
+  .dots i:nth-child(4) { animation: d4 1.6s steps(1, end) infinite; }
+
+  @keyframes d2 { 0% { opacity: 0 } 25%, 100% { opacity: 1 } }
+  @keyframes d3 { 0% { opacity: 0 } 50%, 100% { opacity: 1 } }
+  @keyframes d4 { 0% { opacity: 0 } 75%, 100% { opacity: 1 } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dots i { animation: none; }
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 1.75rem auto;
+    width: 3rem;
+  }
+
+  p {
+    margin: 0;
+    color: var(--mute);
+    font-size: 0.9375rem;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Project page coming soon<span class="dots" aria-hidden="true"><i>.</i><i>.</i><i>.</i><i>.</i></span></h1>
+    <hr>
+  </main>
+</body>
+</html>
